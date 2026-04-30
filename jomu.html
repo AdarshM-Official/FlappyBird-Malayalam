@@ -1,25 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flappy Bird - Adarsh Edition</title>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-color: #4ec0ca;
+            --frame-color: #333;
+        }
+
         body {
             margin: 0;
-            background: #70c5ce;
+            padding: 0;
+            /* Retro pattern background */
+            background-color: var(--bg-color);
+            background-image: radial-gradient(#ffffff 1px, transparent 1px);
+            background-size: 20px 20px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            font-family: 'Press Start 2P', cursive;
         }
+
+        .game-header {
+            color: white;
+            text-shadow: 3px 3px 0px #222;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .game-header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        /* The "Arcade Machine" Frame */
+        .canvas-wrapper {
+            position: relative;
+            padding: 15px;
+            background: var(--frame-color);
+            border-radius: 20px;
+            box-shadow: 
+                0 20px 50px rgba(0,0,0,0.5),
+                inset 0 0 10px rgba(255,255,255,0.2);
+            border-bottom: 8px solid #111;
+        }
+
         canvas {
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.4);
+            display: block;
+            border-radius: 5px;
+            cursor: pointer;
         }
+
+        .controls-hint {
+            margin-top: 20px;
+            color: #fff;
+            font-size: 0.7rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+        }
+
     </style>
 </head>
 <body>
-<script src="jomu.js"></script>
+
+    <div class="game-header">
+        <h1>ADARSH EDITION</h1>
+    </div>
+
+    <div class="canvas-wrapper">
+        <!-- Phaser injects the canvas here -->
+        <script src="jomu.js"></script>
+    </div>
+
+    <div class="controls-hint">
+        Press Space or Tap to Flap
+    </div>
+
 </body>
 </html>
