@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            height: auto;
+            overflow: hidden;
+            /* keeps rounded corners clean */
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* removes bottom gap */
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flappy Bird</h1>
+    <p>Play the game! With custom audio and visual effects.</p>
+    #create 3 cards with images and descriptions of the game features with redired links to the game page when clicked
+    on the cards
+    <div class="card-container">
+        <div class="card">
+            <a href="ktkd.html">
+                <img src="assets/gameover.jpg" alt="Feature 1">
+            </a>
+            <div class="card-body">
+                <a href="ktkd.html" class="btn">Play Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="jomu.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReznhoqBhFi4Qrd2KV_QgnaLOyNntMD0Rn3g&s" alt="Feature 2">
+            </a>
+            <div class="card-body">
+                <a href="jomu.html" class="btn">Play Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
